@@ -1,0 +1,2 @@
+else:
+			print("¡Necesitas 10 monedas para entrar!")
