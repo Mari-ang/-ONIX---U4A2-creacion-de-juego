@@ -1,0 +1,13 @@
+extends Area2D
+
+signal moneda_agarrada
+
+func _ready():
+	# Conectar señal para detectar cuando el jugador entra
+	connect("body_entered", Callable(self, "_on_body_entered"))
+	add_to_group("moneda") # Para detección extra si hace falta
+
+func _on_body_entered(body):
+	if body.is_in_group("jugador"):
+		emit_signal("moneda_agarrada")
+		queue_free()
