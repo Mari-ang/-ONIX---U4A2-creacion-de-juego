@@ -1,0 +1,4 @@
+
+@export var bala_escena: PackedScene
+@onready var spawn_point = $SpawnPoint
+@onready var timer = $Timer
