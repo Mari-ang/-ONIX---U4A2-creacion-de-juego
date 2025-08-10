@@ -1,0 +1,6 @@
+func aumentar_salto():
+	# Aumenta el salto un 50% por moneda
+	salto *= 1.5
+	if salto < salto_maximo:
+		salto = salto_maximo
+	print("Nuevo valor de salto:", salto)
