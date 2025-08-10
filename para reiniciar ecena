@@ -1,0 +1,4 @@
+call_deferred("_reiniciar_escena") # Llama a reiniciar sin esperar
+
+func _reiniciar_escena():
+	get_tree().reload_current_scene()
