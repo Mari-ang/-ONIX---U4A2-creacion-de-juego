@@ -1,0 +1,2 @@
+@export var velocidad: float = 200.0
+var objetivo: Node2D
