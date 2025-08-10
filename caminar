@@ -1,0 +1,9 @@
+var direccion = Vector2.ZERO
+	if Input.is_action_pressed("ui_right"):
+		direccion.x += 1
+		animated_sprite.play("caminar_derecha")
+	elif Input.is_action_pressed("ui_left"):
+		direccion.x -= 1
+		animated_sprite.play("caminar_izquierda")
+	else:
+		animated_sprite.stop()
