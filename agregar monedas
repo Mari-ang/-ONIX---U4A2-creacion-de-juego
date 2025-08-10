@@ -1,0 +1,9 @@
+func agregar_moneda():
+	monedas += 1
+	label_monedas.text = str(monedas)
+	print("¡Moneda agarrada!")
+	aumentar_salto()
+	guardar_datos() # Guardar cada vez que agarre una moneda
+
+func _on_moneda_agarrada():
+	agregar_moneda()
