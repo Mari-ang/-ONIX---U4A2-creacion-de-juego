@@ -1,0 +1,10 @@
+func guardar_datos():
+	var datos = {
+		"monedas": monedas,
+		"salto": salto
+	}
+	var archivo = FileAccess.open("user://progreso.save", FileAccess.WRITE)
+	if archivo:
+		archivo.store_var(datos)
+		archivo.close()
+		print("✅ Progreso guardado")
