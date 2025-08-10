@@ -1,0 +1,22 @@
+extends CharacterBody2D
+
+@export var velocidad: float = 200.0
+var objetivo: Node2D
+
+func _ready():
+	# Buscar al jugador en la escena
+	objetivo = get_parent().get_node("personaje")
+
+func _physics_process(delta: float):
+	if objetivo:
+		var direccion = (objetivo.position - position).normalized()
+		velocity = direccion * velocidad
+		move_and_slide()
+
+		# Detectar si está tocando al jugador
+		if position.distance_to(objetivo.position) < 20:
+			print("¡El jugador ha muerto!")
+			call_deferred("_reiniciar_escena") # Llama a reiniciar sin esperar
+
+func _reiniciar_escena():
+	get_tree().reload_current_scene()
