@@ -1,0 +1,12 @@
+func cargar_datos():
+	if FileAccess.file_exists("user://progreso.save"):
+		var archivo = FileAccess.open("user://progreso.save", FileAccess.READ)
+		if archivo:
+			var datos = archivo.get_var()
+			archivo.close()
+			monedas = datos.get("monedas", 0)
+			salto = datos.get("salto", -900.0)
+			label_monedas.text = str(monedas)
+			print("📂 Progreso cargado: ", datos)
+	else:
+		print("⚠ No hay archivo de guardado, iniciando en cero")
