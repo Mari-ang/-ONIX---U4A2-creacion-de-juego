@@ -3,9 +3,14 @@ juego de plataformas y recoleccion de monedas donde en cada nivel habra un villa
 
 
  Características principales:
-Puedes tomar monedas las cuales harán que tu salto aumente.
-Tiene plataformas en movimiento.
-Tiene un generador de balas.
-Tiene una plataforma en la que no puedes sufrir daño.
-Tiene murcielagos los cuales si los tocas regresas al inicio.
-Es capaz de guardar los avances del juego.
+ 
+Tipo de juego 2D
+
+Sistema de puntaje al recolectar objetos
+
+Al menos 2 niveles
+
+Los archivos del proyecto están separados por carpetas
+
+Sistema de guardado de ubicación y puntaje del personaje
+
